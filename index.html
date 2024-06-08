@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="output.css" />
+  <script src="script.js" defer></script>
+  <title>Weather App</title>
+</head>
+
+<body class="flex justify-center">
+  <!-- weather card -->
+  <div
+    class="flex-col justify-between bg-gradient-to-r from-cyan-500 to-blue-500 mt-20 px-6 py-5 rounded-lg font-sans " id="card">
+    <!-- search box -->
+    <div class="flex gap-2 justify-center">
+      <input type="text" class="w-full outline-none rounded-lg px-3 py-[8px]" placeholder="Enter your city"
+        id="inp-box" />
+      <div class="bg-white rounded-full w-12 flex justify-center items-center cursor-pointer" id="search-btn">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+    </div>
+    <p class="text-white mt-3" id="error"></p>
+    <div class="hidden" id="weather-info">
+      <!-- temp box -->
+      <div class="mt-4">
+        <div class="flex justify-center">
+          <img src="./images/clear.png" alt="" id="weather-img" class="w-48" />
+        </div>
+        <div class="text-white text-center">
+          <h1 class="text-4xl" id="temp">0°c</h1>
+          <p class="text-2xl" id="city-name">New York</p>
+        </div>
+      </div>
+      <!-- humidity and windspeed -->
+      <div class="flex justify-between text-white mt-10 gap-10">
+        <!--  humidity  -->
+        <div class="flex gap-2 items-center">
+          <img src="./images/humidity.png" alt="" class="w-8 h-8" />
+          <div>
+            <p id="humidity">48%</p>
+            <p>Humidity</p>
+          </div>
+        </div>
+        <!-- windspeed -->
+        <div class="flex items-center gap-2">
+          <img src="./images/wind.png" alt="" class="w-8 h-8 " />
+          <div class="text-white">
+            <p id="wind">0 km/h</p>
+            <p>Wind Speed</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
